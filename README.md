@@ -42,13 +42,16 @@ cd Image-Pipeline-Full-Stack-Assignment
 ```bash
 npm install --legacy-peer-deps
 ```
+  
+The flag `--legacy-peer-deps` is being used as the `react-canvas-draw` package is now deprecated.
 
-> [!NOTE]  
-> The flag `--legacy-peer-deps` is being used as the `react-canvas-draw` package is now deprecated.
-> The application will be available at `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
 ## Challenges
 
 There were some challenges that I faced during this assignment -
 
-- 
+- Working with the image data which was saved in the browser temporarily, during transfer from one component to another.
+  - I managed through it by passing its browser generated url.
+- Another challenge was to make the mask with a background (`black` as mentioned in the JD).
+  - It was done by making a copy of the canvas and adding the `fillStyle` propery to the copied canvas. 
